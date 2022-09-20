@@ -17,17 +17,19 @@ public class Main {
         System.out.println("Enter deposit amount");
         depAmount = scanner.nextDouble();
 
+        double oneYear = calculateDepositInterestInYear();
+        double fiveYears = calculateDepositInterestInYear() * 5;
+        double tenYears = calculateDepositInterestInYear() * 10;
+
         System.out.println("Report for " + userName + " " + userSurname);
-        System.out.println("In a year you will earn ");
-        System.out.println("In 5 years you will earn ");
-        System.out.println("In 10 years you will earn ");
-
-
+        System.out.println("In a year you will earn " + oneYear + " UAH");
+        System.out.println("In 5 years you will earn " + fiveYears + " UAH");
+        System.out.println("In 10 years you will earn " + tenYears + " UAH");
 
 
 
     }
-    public double calculateDepositInterestInYear() {
+    public static double calculateDepositInterestInYear() {
         return depAmount * 0.05;
     }
 }
